@@ -1,0 +1,47 @@
+{
+  "name": "nodebox",
+  "description": "a quick and easy opensource dropbox alternative, using node.js and s3",
+  "version": "0.0.1",
+  "homepage": "https://github.com/sack.io/nodebox",
+  "author": {
+    "name": "Ben Sack",
+    "email": "ben@sack.io"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/sack.io/nodebox.git"
+  },
+  "bugs": {
+    "url": "https://github.com/sack.io/nodebox/issues"
+  },
+  "licenses": [
+    {
+      "type": "MIT",
+      "url": "https://github.com/sack.io/nodebox/blob/master/LICENSE-MIT"
+    }
+  ],
+  "main": "lib/main",
+  "engines": {
+    "node": ">= 0.10.0"
+  },
+  "scripts": {
+    "test": "grunt nodeunit"
+  },
+  "devDependencies": {
+    "grunt-contrib-jshint": "~0.6.4",
+    "grunt-contrib-nodeunit": "~0.2.0",
+    "grunt-contrib-watch": "~0.5.3",
+    "grunt": "~0.4.5"
+  },
+  "dependencies": {
+    "async": "*"
+  , "underscore": "*"
+  , "jsbelt": "*"
+  , "optionall": "*"
+  , "fstk": "git://github.com/sackio/fstk.git#master"
+  , "winston": "*"
+  , "awstk": "git://github.com/sackio/awstk.git#master"
+  , "its-thinking": "*"
+  }
+, "keywords": []
+}
