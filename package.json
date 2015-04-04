@@ -1,6 +1,6 @@
 {
   "name": "nodebox",
-  "description": "a quick and easy opensource dropbox alternative, using node.js and s3",
+  "description": "fast and easy opensource dropbox alternative, using node.js and s3",
   "version": "0.0.1",
   "homepage": "https://github.com/sack.io/nodebox",
   "author": {
