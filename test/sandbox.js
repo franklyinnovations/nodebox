@@ -42,26 +42,25 @@ if (O.VERBOSE) FW.on('readdir', function(path, err, contents){
   return;
 });
 
-if (O.LOG) FW.on('readdir', function(path, err, contents){
-  return Log[err ? 'error' : 'info'](path);
-});
-if (O.LOG) FW.on('readdir:part', function(path, files, part){
-  return Log.info(path + ':::' + part);
+if (O.LOG) FW.on('readdir', function(path, err, files, part){
+  Log[err ? 'error' : 'info'](path + (Belt.isNull(part) ? '' : ':::' + part));
 });
 
 GB.contents = {
   'files': []
 , 'dirs': []
 };
-FW.on('readdir', function(path, err, contents){
-  if (_.any(contents.files)) GB.contents.files = GB.contents.files.concat(contents.files);
-  if (_.any(contents.dirs)) GB.contents.dirs = GB.contents.dirs.concat(contents.dirs);
-  return;
-});
-FW.on('readdir:part', function(path, files){
-  GB.contents.files = GB.contents.files.concat(files);
-  return;
-});
+if (O.STORE){
+  FW.on('readdir', function(path, err, contents){
+    if (_.any(contents.files)) GB.contents.files = GB.contents.files.concat(contents.files);
+    if (_.any(contents.dirs)) GB.contents.dirs = GB.contents.dirs.concat(contents.dirs);
+    return;
+  });
+  FW.on('readdir:part', function(path, files){
+    GB.contents.files = GB.contents.files.concat(files);
+    return;
+  });
+}
 
 Spinner.start();
 
