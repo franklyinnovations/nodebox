@@ -42,6 +42,7 @@
   , "fstk": "git://github.com/sackio/fstk.git#master"
   , "winston": "*"
   , "awstk": "git://github.com/sackio/awstk.git#master"
+  , "aws-sdk": "*"
   , "its-thinking": "*"
   }
 , "keywords": []
