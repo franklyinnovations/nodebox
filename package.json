@@ -44,6 +44,7 @@
   , "awstk": "git://github.com/sackio/awstk.git#master"
   , "aws-sdk": "*"
   , "its-thinking": "*"
+  , "moment": "*"
   }
 , "keywords": []
 }
